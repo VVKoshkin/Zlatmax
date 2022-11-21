@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document sample</title>
+    <!-- Montserrat medium & Semi-Bold -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- resets all to 0, for cross-browsing needs -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- <link rel="stylesheet" href="css/borders.css"> just for demonstration, delete when real developement -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-section first">
+            <div class="container">
+                <div class="navbar">
+                    <div class="navbar-hamburger">
+                        <!-- will be shown when screen width less then container width -->
+                        <div class="navbar-hamburger__line"></div>
+                        <div class="navbar-hamburger__line"></div>
+                        <div class="navbar-hamburger__line"></div>
+                    </div>
+                    <div class="navbar-elements">
+                        <!-- whole block will be hidden when screen width less then container width -->
+                        <div class="navbar-element">
+                            <a class="navbar-element__link" href="#">О нас</a>
+                        </div>
+                        <div class="navbar-element">
+                            <a class="navbar-element__link" href="#">Оплата и доставка</a>
+                        </div>
+                        <div class="navbar-element">
+                            <a class="navbar-element__link" href="#">Новости</a>
+                        </div>
+                        <div class="navbar-element">
+                            <a class="navbar-element__link" href="#">Контакты</a>
+                        </div>
+                    </div>
+                    <div class="navbar-personal-acc">
+                        <a href="#">Личный кабинет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-section second">
+            <div class="container">
+                <div class="navbar">
+                    <img src="img/logo.jpg" alt="logo" class="navbar-logo">
+                    <input class="navbar-search" type="text">
+                    <div class="navbar-locations">
+                        <label for="locations">
+                            <img src="img/ico/location.svg" alt="">
+                        </label>
+                        <select id="locations">
+                            <option value="Moscow">Москва</option>
+                            <option value="SPb">Питер</option>
+                        </select>
+                    </div>
+                    <div class="navbar-phone">
+                        <a class="navbar-phone__phonelink" href="tel:+7-800-777-49-67">8-800-777-49-67</a>
+                        <!-- todo там еще какая-то стрелочка вроде, но что из неё выпадать должно непонятно... -->
+                        <p href="#" class="navbar-phone__phoneorder">Заказать звонок</p>
+                    </div>
+                    <a href="#" class="navbar-favs-link"><img src="img/ico/favorites.svg" alt="favs"
+                            class="navbar-favs-link__img"></a>
+                    <div class="navbar-order-info">
+                        <div class="navbar-basket">
+                            <img class="navbar-basket__icon" src="img/ico/basket.svg" alt="">
+                            <!-- absolute pos -->
+                            <p class="navbar-basket__amount">0</p>
+
+                        </div>
+                        <p class="navbar-order-info__moneysum">0</p>
+                        <a href="#" class="navbar-order-info__checkout">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-section third">
+            <div class="container">
+                <div class="navbar navbar-fine-types">
+                    <div class="navbar-fine-type">
+                        <p class="navbar-fine-type__name">Каталог ножей</p>
+                        <div class="navbar-fine-type-list">
+                            <!-- TODO -->
+                        </div>
+                    </div>
+                    <div class="navbar-fine-type">
+                        <p class="navbar-fine-type__name">Клинковое оружие</p>
+                        <div class="navbar-fine-type-list">
+                            <!-- TODO -->
+                        </div>
+                    </div>
+                    <div class="navbar-fine-type">
+                        <p class="navbar-fine-type__name">Сувенирные изделия</p>
+                        <div class="navbar-fine-type-list">
+                            <!-- TODO -->
+                        </div>
+                    </div>
+                    <div class="navbar-fine-type">
+                        <p class="navbar-fine-type__name">Фонари ARMYTEK</p>
+                        <div class="navbar-fine-type-list">
+                            <!-- TODO -->
+                        </div>
+                    </div>
+                    <div class="navbar-fine-type">
+                        <p class="navbar-fine-type__name">Сопуствующие товары</p>
+                        <div class="navbar-fine-type-list">
+                            <!-- TODO -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="promo-section screen-width-bgi">
+            <div class="container promo-section-content">
+                <div class="promo-section-content-texts">
+                    <h4 class="promo-section-content-texts__headline">Интернет магазин сертифицированных<br>
+                        <p>златоустовских ножей</p>
+                    </h4>
+                    <div class="promo-section-content-texts__shorts">
+                        <p class="row1">Добро пожаловать на официальный сайт «ЗЛАТМАКС»! В нашем магазине</p>
+                        <p class="row2">представлен наиболее широкий выбор Златоустовских ножей от Златоустовских
+                        </p>
+                        <p class="row3">Оружейных Фабрик и компаний, мы являемся официальными поставщиками.</p>
+                    </div>
+                    <button class="promo-section-content-btn btn">Подробнее</button>
+                    <div class="slider-controller">
+                        <!-- ползунок один, перемещается в зависимости от active чёрточки (dash) -->
+                        <div class="slider-controller-toddler"></div>
+                        <div class="slider-controller-slidenum">
+                            <p class="slider-controller-slidenum__current">01</p>
+                            <p class="slider-controller-slidenum__total">4</p>
+                        </div>
+                        <div class="slider-controller-dash active"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                    </div>
+                </div>
+                <div class="promo-section-content-image">
+                    <img src="img/first-screen_knifes.png" alt="knife sample" class="promo-section-content-image__img">
+                    <div class="promo-section-content-image-popup"><button
+                            class="promo-section-content-image-popup__btn btn">+</button>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="promo-section-content-image-popup"><button
+                            class="promo-section-content-image-popup__btn btn">+</button>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="promo-section-content-image-popup"><button
+                            class="promo-section-content-image-popup__btn btn">+</button>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container promo-section-advs">
+                <div class="promo-section-adv">
+                    <img src="img/first-screen_warranty.png" alt="warranty">
+                    <p>Гарантия 100% возврата <br>
+                        денежных средств</p>
+                </div>
+                <div class="promo-section-adv">
+                    <img src="img/first-screen_ship.png" alt="ship">
+                    <p>Доставка по России, <br>
+                        Казахстану и Белоруссии</p>
+                </div>
+                <div class="promo-section-adv">
+                    <img src="img/first-screen_order.png" alt="order">
+                    <p>Возможность оформление <br>
+                        заказа без регистрации.</p>
+                </div>
+                <div class="promo-section-adv">
+                    <img src="img/first-screen_discounts.png" alt="discounts">
+                    <p>Скидки постоянным <br>
+                        покупателям.</p>
+                </div>
+            </div>
+        </section>
+        <section class="total-fines-section">
+            <div class="container">
+                <div class="total-fines-catalogs">
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                    <div class="total-fines-catalog">
+                        <img src="img/fines_file_sample.png" alt="" class="total-fines-catalog__img">
+                        <p class="total-fines-catalog__headline">Каталог ножей</p>
+                        <hr>
+                        <ul class="total-fines-catalog-types">
+                            <li class="total-fines-catalog-type">Разделочные</li>
+                            <li class="total-fines-catalog-type">Туристические</li>
+                            <li class="total-fines-catalog-type">Охотничьи</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hits-fines-section">
+            <div class="container">
+                <div class="fines-section-head">
+                    <h4 class="fines-section-head__headline">Хиты продаж</h4>
+                    <a href="" class="fines-section-head__link">Перейти в каталог<img src="img/arrow.png" alt=""></a>
+                </div>
+
+                <div class="fine-cards">
+                    <div class="fine-cards">
+                        <img src="img/hits_fine_sample.jpg" alt="hit">
+                        <div class="fine-card-desc">
+                            <h4 class="fine-card-desc__name">Нож Лиса</h4>
+                            <div class="fine-card-desc-row">
+                                <p>95х18</p>
+                                <p>Орех, Алюминий</p>
+                            </div>
+                            <div class="fine-card-desc-row">
+                                <div class="fine-card-desc-row-stars">
+                                    <!-- TODO -->
+                                </div>
+                                <p>12 отзывов</p>
+                            </div>
+                            <hr>
+                            <div class="fine-card-price">
+                                <p>2 719 р.</p>
+                                <div class="fine-card-price-actions">
+                                    <a href="#"><img src="img/ico/scales.svg" alt=""></a>
+                                    <a href="#"><img src="img/ico/favorites.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <button class="fine-card-purchase-btn btn">В корзину
+                                <img src="img/ico/basket.svg" alt="basket ico"></button>
+                        </div>
+                    </div>
+
+                    <div class="slider-controller">
+                        <!-- ползунок один, перемещается в зависимости от active чёрточки (dash) -->
+                        <div class="slider-controller-toddler"></div>
+                        <div class="slider-controller-dash active"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-novelties screen-width-bgi">
+            <div class="container section-novelties-content">
+                <div class="novelties-desc">
+                    <h4 class="novelties-desc__header">Новинки</h4>
+                    <p class="novelties-desc__typeset">Добро пожаловать на <br>
+                        официальный сайт «ЗЛАТМАКС»!<br>
+                        В нашем магазине представлен<br>
+                        наиболее широкий выбор<br>
+                        Златоустовских ножей от <br>
+                        Златоустовских Оружейных <br>
+                        Фабрик и компаний, мы<br>
+                        являемся официальными <br>
+                        поставщиками.</p>
+                    <a href="#" class="novelties-desc__link">Больше новинок<img src="img/arrow.png" alt="more..."></a>
+                </div>
+                <div class="fine-cards">
+                    <div class="fine-cards">
+                        <img src="img/hits_fine_sample.jpg" alt="hit">
+                        <div class="fine-card-desc">
+                            <h4 class="fine-card-desc__name">Нож Лиса</h4>
+                            <div class="fine-card-desc-row">
+                                <p>95х18</p>
+                                <p>Орех, Алюминий</p>
+                            </div>
+                            <div class="fine-card-desc-row">
+                                <div class="fine-card-desc-row-stars">
+                                    <!-- TODO -->
+                                </div>
+                                <p>12 отзывов</p>
+                            </div>
+                            <hr>
+                            <div class="fine-card-price">
+                                <p>2 719 р.</p>
+                                <div class="fine-card-price-actions">
+                                    <a href="#"><img src="img/ico/scales.svg" alt=""></a>
+                                    <a href="#"><img src="img/ico/favorites.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <button class="fine-card-purchase-btn btn">В корзину
+                                <img src="img/ico/basket.svg" alt="basket ico"></button>
+                        </div>
+                    </div>
+                    <div class="slider-controller">
+                        <!-- ползунок один, перемещается в зависимости от active чёрточки (dash) -->
+                        <div class="slider-controller-toddler"></div>
+                        <div class="slider-controller-dash active"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-discounts">
+            <div class="container">
+                <div class="fines-section-head">
+                    <h4 class="fines-section-head__headline">Акции</h4>
+                    <a href="" class="fines-section-head__link">Все акции<img src="img/arrow.png" alt=""></a>
+                </div>
+
+                <div class="fine-cards">
+                    <div class="fine-cards">
+                        <img src="img/hits_fine_sample.jpg" alt="hit">
+                        <div class="fine-card-desc">
+                            <h4 class="fine-card-desc__name">Нож Лиса</h4>
+                            <div class="fine-card-desc-row">
+                                <p>95х18</p>
+                                <p>Орех, Алюминий</p>
+                            </div>
+                            <div class="fine-card-desc-row">
+                                <div class="fine-card-desc-row-stars">
+                                    <!-- TODO -->
+                                </div>
+                                <p>12 отзывов</p>
+                            </div>
+                            <hr>
+                            <div class="fine-card-price">
+                                <p>2 719 р.</p>
+                                <div class="fine-card-price-actions">
+                                    <a href="#"><img src="img/ico/scales.svg" alt=""></a>
+                                    <a href="#"><img src="img/ico/favorites.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <button class="fine-card-purchase-btn btn">В корзину
+                                <img src="img/ico/basket.svg" alt="basket ico"></button>
+                        </div>
+                    </div>
+
+                    <div class="slider-controller">
+                        <!-- ползунок один, перемещается в зависимости от active чёрточки (dash) -->
+                        <div class="slider-controller-toddler"></div>
+                        <div class="slider-controller-dash active"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                        <div class="slider-controller-dash"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-articles">
+            <div class="container">
+                <h4 class="section-articles-headline">Наши статьи</h4>
+                <div class="articles">
+                    <div class="article">
+                        <img class="article-img" src="img/article_img_sample.jpg" alt="article img">
+                        <h4 class="article-headline">Все о ножах: как правильно выбрать</h4>
+                        <p class="article-date">24.07.2019</p>
+                    </div>
+                    <div class="article">
+                        <img class="article-img" src="img/article_img_sample.jpg" alt="article img">
+                        <h4 class="article-headline">Все о ножах: как правильно выбрать</h4>
+                        <p class="article-date">24.07.2019</p>
+                    </div>
+                    <div class="article">
+                        <img class="article-img" src="img/article_img_sample.jpg" alt="article img">
+                        <h4 class="article-headline">Все о ножах: как правильно выбрать</h4>
+                        <p class="article-date">24.07.2019</p>
+                    </div>
+                    <div class="article">
+                        <img class="article-img" src="img/article_img_sample.jpg" alt="article img">
+                        <h4 class="article-headline">Все о ножах: как правильно выбрать</h4>
+                        <p class="article-date">24.07.2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flashlights">
+            <div class="container">
+                <div class="flashlight-cards">
+                    <div class="flashlight-card">
+                        <div class="flashlight-card-desc">
+                            <h4>Тактические фонари</h4>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <button class="btn">Подробнее</button>
+                        </div>
+                        <img src="img/flashlight-img_sample.jpg" alt="flashlight sample">
+                    </div>
+                    <div class="flashlight-card">
+                        <div class="flashlight-card-desc">
+                            <h4>Тактические фонари</h4>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <button class="btn">Подробнее</button>
+                        </div>
+                        <img src="img/flashlight-img_sample.jpg" alt="flashlight sample">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fines-flashlights">
+            <div class="container">
+                <div class="fines-section-head">
+                    <h4 class="fines-section-head__headline">Фонари</h4>
+                    <a href="" class="fines-section-head__link">Перейти в каталог<img src="img/arrow.png" alt=""></a>
+                </div>
+
+                <div class="fine-cards">
+                    <div class="fine-cards">
+                        <img src="img/flashlight-img_sample.jpg" alt="hit">
+                        <div class="fine-card-desc">
+                            <h4 class="fine-card-desc__name">Нож Лиса</h4>
+                            <div class="fine-card-desc-row">
+                                <p>95х18</p>
+                                <p>Орех, Алюминий</p>
+                            </div>
+                            <div class="fine-card-desc-row">
+                                <div class="fine-card-desc-row-stars">
+                                    <!-- TODO -->
+                                </div>
+                                <p>12 отзывов</p>
+                            </div>
+                            <hr>
+                            <div class="fine-card-price">
+                                <p>2 719 р.</p>
+                                <div class="fine-card-price-actions">
+                                    <a href="#"><img src="img/ico/scales.svg" alt=""></a>
+                                    <a href="#"><img src="img/ico/favorites.svg" alt=""></a>
+                                </div>
+                            </div>
+                            <button class="fine-card-purchase-btn btn">В корзину
+                                <img src="img/ico/basket.svg" alt="basket ico"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-about screen-width-bgi">
+            <div class="container">
+                <h1>Златоустовские ножи интернет-магазин "ЗЛАТМАКС"</h1>
+                <p>Наш интернет-магазин "ЗЛАТМАКС" предлагает Вам ножи очень высокого качества из города оружейников -
+                    Златоуста.
+                    Златоустовские ножи известны и популярны среди потребителей как на российским рынке, так и за
+                    рубежом: ножи охотничьи,
+                    хозяйственные, туристические, рыбацкие, складные и метательные. Нож Златоуста - это идеальный друг и
+                    товарищ в
+                    повседневной жизни и в экстремальных ситуациях. На многую продукцию распространяется гарантия до 10
+                    лет - это один из
+                    главных показателей качества. Для Вас на нашем сайте "zlatmax" предложен огромный ассортимент
+                    Златоустовских ножей. Наши
+                    менеджеры помогут определиться и подобрать самый лучший Златоустовский нож, ориентируясь на Ваши
+                    пожелания.</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-blocks">
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">ИНФОРМАЦИЯ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem"><a href="#">Златоустовские ножи <br>
+                                в Москве и Московской <br>
+                                области</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Ножевые стали</a></li>
+                        <li class="footer-content-list__elem"><a href="#">О нас</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Условия оплаты <br>
+                                и доставки</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Политика <br>
+                                конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">СЛУЖБА ПОДДЕРЖКИ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem"><a href="#">Контактная информация</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Возврат товара</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Карта сайта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">ДОПОЛНИТЕЛЬНО</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem"><a href="#">Подарочные сертификаты</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Партнеры</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Товары со скидкой</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">ЛИЧНЫЙ КАБИНЕТ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem"><a href="#">Личный кабинет</a></li>
+                        <li class="footer-content-list__elem"><a href="#">История заказов</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Мои закладки</a></li>
+                        <li class="footer-content-list__elem"><a href="#">Рассылка новостей</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-content-blocks">
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">КОНТАКТЫ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem pseudo-tel">
+                            <a href="tel:+78007774967">8 (800) 777-49-67</a>
+                        </li>
+                        <li class="footer-content-list__elem pseudo-clocks">Пн-Пт <br>
+                            7:00 - 16:00 (МСК)</li>
+                        <li class="footer-content-list__elem pseudo-location">Златоуст,<br>
+                            ул. Шоссейная,<br>
+                            д. 1, офис «6Б»</li>
+                        <li class="footer-content-list__elem pseudo-email"><a
+                                href="mailto:info@zlatmax.ru">info@zlatmax.ru</a><br>
+                            и доставки</li>
+                        <li class="footer-content-list__elem">Политика <br>
+                            конфиденциальности</li>
+                    </ul>
+                    <div class="footer-socnets">
+                        <a href="vk.com" class="footer-socnet__link"><img src="img/vk.png" alt=""
+                                class="footer-socnet__img"></a>
+                        <a href="vk.com" class="footer-socnet__link"><img src="img/vk.png" alt=""
+                                class="footer-socnet__img"></a>
+                        <a href="vk.com" class="footer-socnet__link"><img src="img/vk.png" alt=""
+                                class="footer-socnet__img"></a>
+                    </div>
+                </div>
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">ПОЛЕЗНЫЕ ССЫЛКИ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem"><a href="#">Способы оплаты и доставки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h4 class="footer-content-headline">НАША ГАРАНТИЯ</h4>
+                    <ul class="footer-content-list">
+                        <li class="footer-content-list__elem">Недовольны своей покупкой?<br>
+                            Вы можете вернуть ее в течении<br>
+                            30 дней с даты получения,<br>
+                            согласно <a class="yellow-link" href="#">нашим правилам</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-content-blocks">
+                <h4 class="footer-content-headline">НОВОСТНАЯ РАССЫЛКА</h4>
+                <form class="footer-rss">
+                    <p class="footer-rss-invite">Подпишитесь прямо сейчас!</p>
+
+                    <input class="footer-rss-mail" type="email" name="" id="" placeholder="example@gmail.com">
+                    <input type="submit" value=">">
+                    <!-- TODO insert checkbox with text: Я прочитал Условия соглашения и <br>
+                    согласен с условиями -->
+                </form>
+            </div>
+            <div class="footer-content-blocks">
+                <p class="footer-content-list__elem">Все материалы, размещенные на сайте, носят справочный характер и не
+                    являются
+                    публичной офертой, определяемойположениями Статьи 437 Гражданского кодекса Российской Федерации.
+                    При копировании материалов гиперссылка на www.zlatmax.ru обязательна!</p>
+                <p class="footer-content-list__elem">Златоустовские ножи www.zlatmax.ru ©</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
